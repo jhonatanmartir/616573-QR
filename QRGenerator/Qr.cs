@@ -15,8 +15,7 @@ namespace QRGenerator
         {
             try
             {
-                string logoPath = Path.Combine(path, "/img/aes.png");
-                var qrLogo = QRCodeWriter.CreateQrCodeWithLogo(text, path+ "\\img\\aes.png", 500);
+                var qrLogo = QRCodeWriter.CreateQrCodeWithLogo(text, path+ "\\img\\logo.png", 500);
                 //qrLogo.ChangeBarCodeColor(System.Drawing.Color.DarkGreen);
 
                 if (!qrLogo.Verify())
