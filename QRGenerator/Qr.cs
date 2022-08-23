@@ -34,14 +34,14 @@ namespace QRGenerator
                 return true;
             }catch (Exception ex)
             {
-                Stamp.Write(ex.StackTrace);
+                Stamp.WriteLine(ex.StackTrace);
                 return false;
             }
         }
 
         public static string GetDirectory()
         {
-            string dir = path + "\\result";
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)+"\\QR";
             // If directory does not exist, create it
             if (!Directory.Exists(dir))
             {
